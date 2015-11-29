@@ -31,7 +31,8 @@ var election = {
                     renderer : edges.bs3.newORTermSelectorRenderer({
                         showCount: false,
                         hideEmpty: false,
-                        open: true
+                        open: true,
+                        togglable: false
                     })
                 }),
                 // The vote-share pie chart

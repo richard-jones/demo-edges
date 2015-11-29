@@ -1,0 +1,50 @@
+body {
+    font-family: "Source Sans Pro", sans-serif;
+    background: #f6fdf8;
+    font-size: 14pt;
+}
+
+h1 {
+    font-family: "Play", sans-serif;
+    font-weight: 700;
+    font-size: 500%;
+    color: #ffffff;
+}
+
+h2 {
+    font-family: "Play", sans-serif;
+    font-weight: 700;
+    font-size: 200%;
+    color: #6ea692;
+}
+
+#topstrap {
+    background: #6ea692;
+}
+
+.tagline {
+    color: #ffffff;
+    font-family: "Play", sans-serif;
+    font-weight: 700;
+    font-size: 150%;
+}
+
+#intro {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#examples {
+    border-bottom: 5px solid #6ea692;
+    color: #6ea692;
+}
+
+.demo {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 12pt;
+}
+
+.demo-intro {
+    padding-bottom: 10px;
+}
