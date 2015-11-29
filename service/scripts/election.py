@@ -1,11 +1,19 @@
 from octopus.lib import paths, dataobj, clcsv
-import os, codecs, json, uuid
+import os, codecs, json, uuid, csv
 import esprit
 
 d = paths.rel2abs(__file__, "..", "..", "data", "election")
 rfa = os.path.join(d, "RESULTS FOR ANALYSIS.csv")
+names = os.path.join(d, "name_map.txt")
 out = os.path.join(d, "constituencies.json")
 batch = os.path.join(d, "constituencies.es")
+
+# read in the name map
+nm = {}
+with open(names) as f:
+    reader = csv.reader(f)
+    for row in reader:
+        nm[row[0].strip()] = row[1].strip()
 
 class Constituency(dataobj.DataObj):
     def __init__(self, raw=None):
@@ -30,7 +38,7 @@ class Constituency(dataobj.DataObj):
         super(Constituency, self).__init__(raw, expose_data=True)
 
     def add_result(self, party, votes):
-        # self.result = {"party" : party, "votes" : votes}
+        party = nm.get(party, party)
         self._add_to_list("result", {"party" : party, "votes" : votes})
 
 class RFA(clcsv.SheetWrapper):
