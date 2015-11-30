@@ -39,6 +39,8 @@ QUERY_ROUTE = {
     }
 }
 
+CLIENTJS_SEARCH_BASE_URL = "http://localhost:5029/query/"
+
 ############################################
 # important overrides for account module
 

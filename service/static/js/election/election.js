@@ -16,7 +16,7 @@ var election = {
         var e = edges.newEdge({
             selector: "#election",
             template: election.newElectionTemplate(),
-            search_url: search_base_url + "constituencies/_search",
+            search_url: octopus.config.search_base_url + "constituencies/_search",
             openingQuery : es.newQuery({
                 size: 0
             }),

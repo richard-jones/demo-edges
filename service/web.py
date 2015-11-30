@@ -35,6 +35,10 @@ def index():
 def static(filename):
     return custom_static(filename)
 
+# this allows us to serve our standard javascript config
+from octopus.modules.clientjs.configjs import blueprint as configjs
+app.register_blueprint(configjs)
+
 from octopus.modules.es.query import blueprint as query
 app.register_blueprint(query, url_prefix="/query")
 

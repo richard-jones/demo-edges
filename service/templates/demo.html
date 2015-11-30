@@ -85,13 +85,6 @@
 </div>
 </div>
 
-<!-- javascript constants to use -->
-<script type="text/javascript">
-    // var search_base_url = "http://localhost:9200/edges/";
-    // var search_base_url = "http://edges.ooz.cottagelabs.com/query/"
-    var search_base_url = "http://localhost:5029/query/"
-</script>
-
 <!-- jquery -->
 <script type="text/javascript" src="/static/vendor/edges/vendor/jquery-1.11.1/jquery-1.11.1.js"></script>
 <script type="text/javascript" src="/static/vendor/edges/vendor/jquery-ui-1.11.1/jquery-ui.js"></script>
@@ -102,6 +95,12 @@
 
 <!-- google map include -->
 <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHSLLjD8UtfNlczVJluIxzTOPGFOLStyQ"></script> -->
+
+<!-- get the octopus js (must be done first) -->
+<script type="text/javascript" src="{{url_for('static', filename='js/octopus.js')}}"></script>
+
+<!-- get the application config -->
+<script type="text/javascript" src="{{url_for('configjs.javascript_config')}}"></script>
 
 <script type="text/javascript" src="/static/vendor/edges/es.js"></script>
 <script type="text/javascript" src="/static/vendor/edges/edges.js"></script>
