@@ -38,11 +38,6 @@ def static(filename):
 from octopus.modules.es.query import blueprint as query
 app.register_blueprint(query, url_prefix="/query")
 
-@app.errorhandler(404)
-def page_not_found(e):
-    return render_template('errors/404.html'), 404
-
-
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=app.config['DEBUG'], port=app.config['PORT'], threaded=False)
 
