@@ -20,6 +20,7 @@
     <!-- edges styles -->
     <link rel="stylesheet" href="/static/vendor/edges/css/bs3.edges.css">
     <link rel="stylesheet" href="/static/vendor/edges/css/google.edges.css">
+    <link rel="stylesheet" href="/static/vendor/edges/css/d3.edges.css">
 
     <link rel="stylesheet" href="/static/css/service.css">
 
@@ -66,6 +67,23 @@
     <div class="content">
         <div class="row">
             <div class="col-md-12">
+                <p class="demo-intro">Look at this nice map of the US, divided into PADDs, with floating data attached to each one.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="padd"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="demo">
+<div class="container">
+    <div class="content">
+        <div class="row">
+            <div class="col-md-12">
                 <p class="demo-intro">Try exploring the vote-share for policical parties in the UK's 2015 government elections.  Choose as many
                 constituencies as you like from the menu, and see the break-down of the votes for each party across all
                 your selections.</p>
@@ -84,6 +102,7 @@
     </div>
 </div>
 </div>
+
 
 <!-- jquery -->
 <script type="text/javascript" src="/static/vendor/edges/vendor/jquery-1.11.1/jquery-1.11.1.js"></script>
@@ -107,9 +126,11 @@
 <script type="text/javascript" src="/static/vendor/edges/bs3.edges.js"></script>
 <script type="text/javascript" src="/static/vendor/edges/nvd3.edges.js"></script>
 <script type="text/javascript" src="/static/vendor/edges/google.edges.js"></script>
+<script type="text/javascript" src="/static/vendor/edges/d3.edges.js"></script>
 
 <!-- demo scripts -->
 <script type="text/javascript" src="/static/js/election/election.js"></script>
+<script type="text/javascript" src="/static/js/padd/padd.js"></script>
 
 </body>
 </html>
